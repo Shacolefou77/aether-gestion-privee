@@ -787,3 +787,83 @@ img {
   color: rgba(13, 13, 13, 0.55);
   font-style: italic;
 }
+
+/* ============================================================
+   PAGES EXPERTISES — Tags produits + grille d'index
+   ============================================================ */
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 760px;
+  margin: 2rem auto 0;
+}
+
+.product-tag {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--gris-clair);
+  border: 1px solid rgba(26, 40, 69, 0.1);
+  color: var(--bleu-marine);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.expertises-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.expertise-card {
+  background: var(--blanc);
+  padding: 2rem 1.75rem;
+  border: 1px solid rgba(26, 40, 69, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition);
+}
+
+.expertise-card:hover {
+  border-color: var(--or);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26, 40, 69, 0.06);
+}
+
+.expertise-card h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.expertise-card p {
+  margin: 0;
+  color: rgba(13, 13, 13, 0.75);
+  font-size: 0.95rem;
+}
+
+.expertise-card__link {
+  color: var(--or);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap var(--transition);
+}
+
+.expertise-card:hover .expertise-card__link {
+  gap: 0.75rem;
+}
+
+@media (max-width: 700px) {
+  .expertises-grid {
+    grid-template-columns: 1fr;
+  }
+}
