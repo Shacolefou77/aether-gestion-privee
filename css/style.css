@@ -405,6 +405,20 @@ img {
   text-align: center;
 }
 
+.activity-col__image {
+  aspect-ratio: 16 / 10;
+  background: var(--gris-clair);
+  border: 1px dashed rgba(26, 40, 69, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(13, 13, 13, 0.4);
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
 .activity-col__bar {
   width: 40px;
   height: 2px;
@@ -753,6 +767,63 @@ img {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2rem;
   font-size: 1.05rem;
+}
+
+/* ============================================================
+   SECTION SOMBRE — Variante fond bleu marine
+   ============================================================ */
+
+.section-dark {
+  background: var(--bleu-marine);
+  color: var(--blanc);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark .section__title {
+  color: var(--blanc);
+}
+
+.section-dark p,
+.section-dark .section__lead {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-dark .placeholder-photo {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(201, 170, 111, 0.4);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.section-dark .review {
+  background: rgba(255, 255, 255, 0.04);
+  border-top-color: var(--or);
+}
+
+.section-dark .review__text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-dark .review__author {
+  color: var(--or);
+}
+
+.section-dark .placeholder-content {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.section-dark .btn {
+  background: var(--or);
+  color: var(--bleu-marine);
+  border-color: var(--or);
+}
+
+.section-dark .btn:hover {
+  background: var(--blanc);
+  color: var(--bleu-marine);
+  border-color: var(--blanc);
 }
 
 /* ============================================================
