@@ -1111,3 +1111,56 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   MEGA DROPDOWN — Variante détaillée (Nos expertises)
+   ============================================================ */
+
+.site-nav__dropdown--mega {
+  min-width: 480px;
+  padding: 0.5rem 0;
+}
+
+.site-nav__dropdown--mega li a {
+  padding: 1rem 1.5rem;
+  border-left: 2px solid transparent;
+  background: transparent;
+  color: inherit;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.site-nav__dropdown--mega li a:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  border-left-color: var(--or);
+}
+
+.site-nav__dropdown--mega strong {
+  display: block;
+  font-family: var(--font-titres);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--or);
+  margin-bottom: 0.3rem;
+}
+
+.site-nav__dropdown--mega span {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.site-nav__dropdown--mega li a:hover span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+  .site-nav__dropdown--mega {
+    min-width: 0;
+  }
+  .site-nav__dropdown--mega span {
+    display: none;
+  }
+}
