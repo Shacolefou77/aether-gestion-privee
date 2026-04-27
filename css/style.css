@@ -601,6 +601,10 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.johan-block__text p {
+  text-align: justify;
+}
+
 @media (max-width: 800px) {
   .johan-block {
     grid-template-columns: 1fr;
