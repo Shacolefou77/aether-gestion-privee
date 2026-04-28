@@ -977,6 +977,10 @@ img {
   order: 2;
 }
 
+.split-block--start {
+  align-items: start;
+}
+
 .split-block__photo .placeholder-photo {
   aspect-ratio: 4 / 5;
 }
@@ -1114,6 +1118,61 @@ img {
   .convictions-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   PAGE CABINET — Valeurs (2x2), liste réglementée, quote-author
+   ============================================================ */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 700px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.regulated-list {
+  list-style: none;
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  padding: 0;
+}
+
+.regulated-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.regulated-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--or);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.quote-feature__author {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: rgba(13, 13, 13, 0.65);
+  letter-spacing: 0.04em;
+  font-family: var(--font-corps);
+}
+
+.section-dark .quote-feature__author {
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* ============================================================
