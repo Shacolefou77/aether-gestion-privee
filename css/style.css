@@ -962,6 +962,10 @@ img {
   color: var(--blanc);
 }
 
+.split-block + .quote-feature {
+  margin-top: 4rem;
+}
+
 .split-block {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
