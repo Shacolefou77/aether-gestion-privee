@@ -1149,6 +1149,14 @@ img {
   color: var(--noir);
 }
 
+.section-dark .step-card h3 {
+  color: var(--bleu-marine);
+}
+
+.section-dark .step-card p {
+  color: var(--noir);
+}
+
 .regulated-list {
   list-style: none;
   max-width: 720px;
