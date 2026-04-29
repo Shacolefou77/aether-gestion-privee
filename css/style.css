@@ -1157,6 +1157,73 @@ img {
   color: var(--noir);
 }
 
+/* ============================================================
+   PILIERS — 3 colonnes façon socle grec
+   ============================================================ */
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pillar-card {
+  background: var(--blanc);
+  padding: 2.5rem 2rem 2rem;
+  border-top: 1px solid rgba(26, 40, 69, 0.08);
+  border-left: 1px solid rgba(26, 40, 69, 0.08);
+  border-right: 1px solid rgba(26, 40, 69, 0.08);
+  border-bottom: 4px solid var(--or);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-card__number {
+  font-family: var(--font-titres);
+  font-size: 3rem;
+  color: var(--or);
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.pillar-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.pillar-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+@media (max-width: 800px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   GRILLE 3 COLONNES — Cartes informatives (Univers d'investissement)
+   ============================================================ */
+
+.three-cols-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 800px) {
+  .three-cols-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .regulated-list {
   list-style: none;
   max-width: 720px;
