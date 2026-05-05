@@ -1157,6 +1157,14 @@ img {
   color: var(--noir);
 }
 
+.section-dark .pillar-card h3 {
+  color: var(--bleu-marine);
+}
+
+.section-dark .pillar-card p {
+  color: var(--noir);
+}
+
 /* ============================================================
    PILIERS — 3 colonnes façon socle grec
    ============================================================ */
