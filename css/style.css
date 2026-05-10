@@ -1132,6 +1132,10 @@ a.conviction-card:hover {
   border-top-width: 5px;
 }
 
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 @media (max-width: 800px) {
   .convictions-grid {
     grid-template-columns: 1fr;
