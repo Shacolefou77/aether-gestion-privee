@@ -306,6 +306,10 @@ img {
   margin-bottom: 3rem;
 }
 
+.site-footer__col {
+  text-align: center;
+}
+
 .site-footer__title {
   font-family: var(--font-titres);
   font-size: 1.1rem;
