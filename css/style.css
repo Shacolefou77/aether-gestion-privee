@@ -1136,6 +1136,58 @@ section[id] {
   scroll-margin-top: var(--header-height);
 }
 
+/* ============================================================
+   PAGES LEGALES — Mentions légales, Politique de confidentialité
+   ============================================================ */
+
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  color: var(--bleu-marine);
+}
+
+.legal-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-content h3 {
+  font-size: 1.15rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--bleu-marine);
+  font-weight: 500;
+}
+
+.legal-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.legal-content ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+
+.legal-content address {
+  font-style: normal;
+  background: var(--gris-clair);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  border-left: 3px solid var(--or);
+  line-height: 1.5;
+}
+
 @media (max-width: 800px) {
   .convictions-grid {
     grid-template-columns: 1fr;
