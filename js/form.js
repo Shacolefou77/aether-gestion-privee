@@ -11,7 +11,8 @@
 
   const FLOWS = {
     normal: ['objectifs', 'capital', 'epargne', 'age', 'residence', 'coordonnees'],
-    fiscalite: ['objectifs', 'fiscalite', 'capital', 'epargne', 'age', 'residence', 'coordonnees'],
+    avecFiscalite: ['objectifs', 'capital', 'epargne', 'fiscalite', 'age', 'residence', 'coordonnees'],
+    fiscaliteSeule: ['objectifs', 'fiscalite', 'age', 'residence', 'coordonnees'],
     succession: ['objectifs', 'succession', 'coordonnees'],
   };
 
@@ -45,10 +46,14 @@
 
   function determineFlow() {
     const objs = state.answers.objectifs || [];
+    // Cas 1 : un seul objectif sélectionné
     if (objs.length === 1) {
-      if (objs[0] === 'fiscalite') return FLOWS.fiscalite;
+      if (objs[0] === 'fiscalite') return FLOWS.fiscaliteSeule;
       if (objs[0] === 'succession') return FLOWS.succession;
     }
+    // Cas 2 : fiscalité fait partie d'une sélection multiple
+    if (objs.includes('fiscalite')) return FLOWS.avecFiscalite;
+    // Cas 3 : flux normal
     return FLOWS.normal;
   }
 
