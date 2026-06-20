@@ -176,7 +176,7 @@ img {
   transform: translateX(-50%);
   min-width: 320px;
   background: var(--bleu-marine);
-  border-top: 2px solid var(--or);
+  border: 2px solid var(--or);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   list-style: none;
   padding: 0.5rem 0;
