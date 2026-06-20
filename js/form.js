@@ -7,7 +7,7 @@
   // et remplacez la valeur ci-dessous par votre endpoint Formspree.
   // Tant que cette valeur n'est pas modifiée, le formulaire affiche la page
   // de confirmation sans envoyer réellement les données.
-  const FORMSPREE_ENDPOINT = '';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/meebjqee';
 
   const FLOWS = {
     normal: ['objectifs', 'capital', 'epargne', 'age', 'residence', 'coordonnees'],
