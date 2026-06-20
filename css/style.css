@@ -1627,7 +1627,7 @@ section[id] {
 }
 
 .site-nav__dropdown--mega li a {
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-left: 2px solid transparent;
   background: transparent;
   color: inherit;
@@ -1646,14 +1646,14 @@ section[id] {
   font-weight: 500;
   font-size: 1.05rem;
   color: var(--or);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .site-nav__dropdown--mega span {
   display: block;
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.82rem;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 400;
 }
 
