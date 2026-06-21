@@ -978,7 +978,7 @@ img {
 .partner-logo {
   background: var(--blanc);
   border: 1px dashed rgba(26, 40, 69, 0.2);
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -986,7 +986,7 @@ img {
   font-size: 0.8rem;
   font-style: italic;
   text-align: center;
-  padding: 0.75rem;
+  padding: 0.35rem;
   overflow: hidden;
 }
 
