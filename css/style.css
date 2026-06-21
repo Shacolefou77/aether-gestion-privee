@@ -986,6 +986,21 @@ img {
   font-size: 0.8rem;
   font-style: italic;
   text-align: center;
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.partner-logo:has(img) {
+  border: 1px solid rgba(26, 40, 69, 0.08);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
   padding: 0.5rem;
 }
 
