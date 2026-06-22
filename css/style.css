@@ -1001,6 +1001,16 @@ img {
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+.partner-logo--wide {
+  padding: 0;
+}
+
+.partner-logo--wide img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   padding: 0.5rem;
 }
 
