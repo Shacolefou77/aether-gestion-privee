@@ -111,13 +111,15 @@
       e.preventDefault();
       const slide = e.target.closest('.form-slide');
       const slideName = slide.dataset.slide;
-      // Pour les slides avec textarea (succession), capter la valeur
-      const textarea = slide.querySelector('textarea');
-      if (textarea) {
-        state.answers[slideName] = textarea.value.trim();
-        if (!state.answers[slideName]) return;
+      // Pour la slide succession (textarea requis), capter la valeur et bloquer si vide
+      if (slideName === 'succession') {
+        const textarea = slide.querySelector('textarea');
+        if (textarea) {
+          state.answers[slideName] = textarea.value.trim();
+          if (!state.answers[slideName]) return;
+        }
       }
-      // Pour la slide coordonnées, capter les inputs
+      // Pour la slide coordonnées, capter les inputs (requis) + textarea libre (facultatif)
       if (slideName === 'coordonnees') {
         const fields = slide.querySelectorAll('input[name]');
         const data = {};
@@ -127,6 +129,10 @@
             return;
           }
           data[f.name] = f.value.trim();
+        }
+        const messageTextarea = slide.querySelector('textarea[name="message_libre"]');
+        if (messageTextarea) {
+          data.message_libre = messageTextarea.value.trim();
         }
         state.answers.coordonnees = data;
       }
@@ -142,6 +148,8 @@
   form.addEventListener('input', function (e) {
     if (e.target.tagName === 'TEXTAREA') {
       const slide = e.target.closest('.form-slide');
+      // Le textarea de la slide coordonnees est facultatif : ne pas l'utiliser pour bloquer le bouton
+      if (slide.dataset.slide === 'coordonnees') return;
       const nextBtn = slide.querySelector('.form-next');
       if (nextBtn) nextBtn.disabled = !e.target.value.trim();
     }
@@ -170,6 +178,7 @@
         email: coords.email || '',
         telephone: coords.telephone || '',
         code_postal: coords.code_postal || '',
+        message_libre: coords.message_libre || '',
         message: message,
         _subject: 'Nouvelle demande de contact Æther Gestion Privée',
       };
@@ -218,6 +227,11 @@
     if (answers.epargne) lines.push('Épargne mensuelle : ' + answers.epargne);
     if (answers.age) lines.push('Âge : ' + answers.age);
     if (answers.residence) lines.push('Résidence principale : ' + answers.residence);
+    if (answers.coordonnees && answers.coordonnees.message_libre) {
+      lines.push('');
+      lines.push('Message libre du visiteur :');
+      lines.push(answers.coordonnees.message_libre);
+    }
     return lines.join('\n');
   }
 
